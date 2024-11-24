@@ -286,12 +286,11 @@ The proxy can encapsulate the substructure's behavior, dynamics, and energy inte
    - Proxy attributes:
      - Net inputs and outputs of the cycle.
      - Cycle rate (determined by the slowest reaction step).
-     - Energy balance (\( \Delta E \)) over the cycle.
+     - Energy balance ($\Delta E$) over the cycle.
    - Example: 
-     Instead of simulating \( A + B \rightarrow C \), \( C + D \rightarrow E \), and \( E \rightarrow A \), represent this cycle as:
-     \[
-     (A + B + D) \xrightarrow{\text{Cycle Proxy}} A + E + \text{(Energy)}.
-     \]
+     Instead of simulating $A + B \rightarrow C$, $C + D \rightarrow E$, and $E \rightarrow A$, represent this cycle as:
+
+     $(A + B + D) \rightarrow_{Cycle Proxy} A + E + \text{(Energy)}$
 
 2. **Stable Molecules/Complexes:**
    - Treat stable molecules as static entities that do not require constant computation.
@@ -336,7 +335,7 @@ Emergent substructures might evolve over time, necessitating adjustments to prox
 ### **5. Example Workflow for Cycle Compression**
 1. **Detect Cycle:**
    - Identify a reaction cycle using graph algorithms (e.g., Tarjan's algorithm for strongly connected components).
-   - Example: \( A \rightarrow B \rightarrow C \rightarrow A \).
+   - Example: $A \rightarrow B \rightarrow C \rightarrow A$
 2. **Analyze Behavior:**
    - Compute:
      - Net input-output balance.
@@ -344,9 +343,7 @@ Emergent substructures might evolve over time, necessitating adjustments to prox
      - Reaction rates for each step.
 3. **Create Proxy:**
    - Replace cycle with a single reaction node:
-     \[
-     \text{Cycle Proxy: } A \xrightarrow{\text{net rate}} A + \text{(outputs)} + \text{(energy)}.
-     \]
+     $$\text{Cycle Proxy: } A \rightarrow^{\text{net rate}} A + \text{(outputs)} + \text{(energy)}$$
 4. **Simulate with Proxy:**
    - Use the proxy for subsequent computations, skipping the detailed simulation of intermediate steps.
 
