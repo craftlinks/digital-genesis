@@ -41,12 +41,12 @@ Hieronder staan de belangrijkste categorieën regels die de basis kunnen vormen 
      - Definieer energiewijzigingen ($\Delta E$) voor het vormen of verbreken van bindingen.
    - **Reactievoorwaarden:** Een reactie vindt plaats als het systeem voldoende energie heeft om bindingen te verbreken en als de reactie energetisch gunstig is:
      $$
-     \Delta E = E_{\text{break}} - E_{\text{form}}
+     \Delta E = E_{break} - E_{form}
      $$
      Als $\Delta E < 0$, vindt de reactie spontaan plaats.
    - **Formalisatie:**
-     - $\text{Als } E_{\text{input}} \geq E_{\text{break}}, \text{ kunnen bindingen breken.}$
-     - $\text{Als } \Delta E \leq 0, \text{ zijn de producten stabieler en gaat de reactie door.}$
+     - Als $E_{input} \geq E_{break}$, kunnen bindingen breken.
+     - Als $\Delta E \leq 0$, zijn de producten stabieler en gaat de reactie door.
 
 ---
 
@@ -57,7 +57,7 @@ Hieronder staan de belangrijkste categorieën regels die de basis kunnen vormen 
    - **Reactiepadways:**
      - Gebruik regels zoals $A + B \rightarrow C$ of $A + BC \rightarrow AB + C$.
    - **Formalisatie:**
-     - $\text{Reactanten } R_1 + R_2 \text{ vormen producten als } E_{\text{botsing}} \geq \text{drempel.}$
+     - Reactanten $R_1 + R_2$ vormen producten als $E_{botsing} \geq$ drempel.
      - Definieer een lookup-tabel met mogelijke reactie-uitkomsten voor elk paar reactanten.
 
 ---
@@ -65,7 +65,7 @@ Hieronder staan de belangrijkste categorieën regels die de basis kunnen vormen 
 ### 4. **Behoudswetten**
    - **Behoud van Massa:** Het totale aantal atomen blijft constant tijdens een reactie.
      $$
-     \text{Som van input} = \text{Som van output.}
+     Input_{totaal} = Output_{totaal}
      $$
    - **Behoud van Energie:** Energie wordt behouden tijdens reacties. Definieer of energieveranderingen resulteren in warmte, licht of andere outputs.
    - **Formalisatie:** Houd alle atomen en energie-eenheden vóór en na reacties bij.
@@ -76,25 +76,25 @@ Hieronder staan de belangrijkste categorieën regels die de basis kunnen vormen 
    - **Molecuulstabiliteit:** Definieer "stabiele" configuraties waarbij bindingen sterk zijn en energie wordt geminimaliseerd.
    - **Spontaan Verval:** Instabiele moleculen kunnen willekeurig in de tijd uiteenvallen.
      - Voeg een tijdsafhankelijke regel toe waarbij bindingen met een lage stabiliteitskans breken na een willekeurige duur.
-   - **Formalisatie:** Ken elk molecuul een stabiliteitsscore toe. Als $\text{score} < \text{drempel}, \text{ vindt verval plaats.}$
+   - **Formalisatie:** Ken elk molecuul een stabiliteitsscore toe. Als $S < S_{drempel}$, vindt verval plaats.
 
 ---
 
 ### 6. **Katalysatoren en Remmers**
    - **Katalysatoren:** Definieer speciale "atomen" of "moleculen" die energiebarrières verlagen zonder zelf verbruikt te worden.
-     - $\text{Als Katalysator K aanwezig is, dan } E_{\text{vereist}} = E_{\text{break}} / 2.$
+     - Als Katalysator K aanwezig: $E_{vereist} = E_{break}/2$
    - **Remmers:** Voorkomen reacties door reactanten te stabiliseren of energiebarrières te verhogen.
-     - $\text{Als Remmer I aanwezig is, dan } E_{\text{vereist}} = E_{\text{break}} \times 2.$
+     - Als Remmer I aanwezig: $E_{vereist} = E_{break} \times 2$
 
 ---
 
 ### 7. **Omgeving en Externe Energiebronnen**
    - **Temperatuur:** Beïnvloedt de kinetische energie van moleculen.
      $$
-     \text{Hogere temperatuur } \rightarrow \text{vaker botsingen, meer reacties.}
+     T_{hoog} \rightarrow \text{Meer botsingen en reacties}
      $$
    - **Licht/Elektriciteit:** Voeg regels toe waarbij externe energiebronnen activeringsenergie leveren.
-     - $\text{Als fotonenergie } \geq \text{bindingsenergie, breken bindingen.}$
+     - Als $E_{foton} \geq E_{binding}$, breken bindingen.
 
 ---
 
@@ -114,7 +114,7 @@ Hieronder staan de belangrijkste categorieën regels die de basis kunnen vormen 
 ---
 
 ### Voorbeeld: Eenvoudige Regelset voor Kunstmatige Chemie
-1. Definieer Atomen: $A (\text{valentie}=1), B (\text{valentie}=2), C (\text{valentie}=1)$.
+1. Definieer Atomen: $A(v=1), B(v=2), C(v=1)$.
 2. Definieer Bindingen:
    - $A \leftrightarrow B$: Sterke binding, vereist 10 energiewaarden om te breken.
    - $B \leftrightarrow C$: Zwakke binding, vereist 5 energiewaarden om te breken.
@@ -255,7 +255,7 @@ De aanwezigheid van autocatalytische cycli, waarbij producten van reacties hun e
 
 Als je je richt op reactiecirkels, kan je scoringsfunctie er bijvoorbeeld zo uitzien:
 $$
-\text{Score} = w_1 \cdot C + w_2 \cdot D + w_3 \cdot T
+S = w_1C + w_2D + w_3T
 $$
 Waarbij:
 - $C$: Aantal cirkels in de reactiegraaf.
