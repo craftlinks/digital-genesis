@@ -66,9 +66,9 @@ Below are key categories of rules that could form the foundation of such a syste
 
 ### 4. **Conservation Laws**
    - **Mass Conservation:** The total number of atoms remains constant during a reaction.
-     $$
-     \text{Sum of inputs} = \text{Sum of outputs.}
-     $$
+
+     Sum of inputs = Sum of outputs
+
    - **Energy Conservation:** Energy is conserved during reactions. Define whether energy changes result in heat, light, or other outputs.
    - **Formalization:** Track all atoms and energy units before and after reactions.
 
@@ -92,11 +92,9 @@ Below are key categories of rules that could form the foundation of such a syste
 
 ### 7. **Environment and External Energy Sources**
    - **Temperature:** Affects the kinetic energy of molecules.
-     $$
-     \text{Higher temperature } \rightarrow \text{more frequent collisions, more reactions.}
-     $$
+     Higher temperature -> more frequent collisions, more reactions.
    - **Light/Electricity:** Add rules where external energy sources provide activation energy.
-     - $$ \text{If photon energy } \geq \text{bond energy, bonds break.} $$
+     - If photon energy >= bond energy, bonds break.
 
 ---
 
@@ -116,15 +114,15 @@ Below are key categories of rules that could form the foundation of such a syste
 ---
 
 ### Example: Simple Artificial Chemistry Rule Set
-1. Define Atoms: $$ A \text{ (valency=1)}, B \text{ (valency=2)}, C \text{ (valency=1)} $$.
+1. Define Atoms: $A \text{ (valency=1)}, B \text{ (valency=2)}, C \text{ (valency=1)}$.
 2. Define Bonds:
-   - $$ A \leftrightarrow B $$: Strong bond, requires 10 energy units to break.
-   - $$ B \leftrightarrow C $$: Weak bond, requires 5 energy units to break.
+   - $A \leftrightarrow B$: Strong bond, requires 10 energy units to break.
+   - $B \leftrightarrow C$: Weak bond, requires 5 energy units to break.
 3. Define Reactions:
-   - $$ A + B \rightarrow AB $$ (exothermic, releases 5 energy units).
-   - $$ AB + C \rightarrow ABC $$ (requires 3 energy units).
+   - $A + B \rightarrow AB$ (exothermic, releases 5 energy units).
+   - $AB + C \rightarrow ABC$ (requires 3 energy units).
 4. Stability Rule:
-   - $$ ABC $$ is stable and does not decay spontaneously.
+   - $ABC$ is stable and does not decay spontaneously.
 
 ---
 
@@ -140,14 +138,14 @@ To explore the vast rule space, we need a strategy to generate, sample, and eval
 #### **a) Rule Generation**
 - **Parameter Space Definition:**
   Define a parameterized space for your artificial chemistry rules, e.g.:
-  - Number of atom types (\( A, B, C \)).
+  - Number of atom types ($A$, $B$, $C$).
   - Valency limits (e.g., max bonds an atom can form).
   - Bond strengths and energy requirements.
   - Reaction types (e.g., binary collisions, catalyst-driven, etc.).
 - **Stochastic Rule Creation:**
   Generate rule sets randomly within this parameterized space:
   - Randomly assign bond strengths and formation/breaking rules.
-  - Randomly assign reaction pathways (e.g., \( A + B \rightarrow C \), \( C \rightarrow A + D \)).
+  - Randomly assign reaction pathways (e.g., $A + B \rightarrow C$, $C \rightarrow A + D$).
   - Randomize initial conditions (molecule populations, energy levels).
 
 #### **b) Sampling Strategies**
@@ -248,13 +246,13 @@ The presence of autocatalytic cycles, where products of reactions catalyze their
 
 ### Example Metric Combination for Reaction Cycles
 For a focus on reaction cycles, your scoring function might look like this:
-\[
+$$
 \text{Score} = w_1 \cdot C + w_2 \cdot D + w_3 \cdot T
-\]
+$$
 Where:
-- \( C \): Number of cycles in the reaction graph.
-- \( D \): Diversity of unique molecules.
-- \( T \): Time to decay or stabilization.
-- \( w_1, w_2, w_3 \): Weights reflecting the importance of each factor.
+- $$ C $$: Number of cycles in the reaction graph.
+- $$ D $$: Diversity of unique molecules.
+- $$ T $$: Time to decay or stabilization.
+- $$ w_1, w_2, w_3 $$: Weights reflecting the importance of each factor.
 
 ---
