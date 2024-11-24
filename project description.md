@@ -26,6 +26,8 @@ that mirror characteristics we associate with life.
 - The project could provide insights into how life might have emerged from simple chemical processes
 - This fundamental knowledge could inform theories about life's origins on Earth and potential for life elsewhere
 - Better understanding of minimal requirements for life-like systems
+- Development of criteria to identify potentially life-bearing chemical systems in the universe
+- Guide the search for early signs of life on other worlds by understanding what abstract patterns to look for
 
 2. **Computer Science and AI Advancement**
 - Development of new computational methods for handling complex systems
