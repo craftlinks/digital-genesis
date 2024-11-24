@@ -57,18 +57,18 @@ Below are key categories of rules that could form the foundation of such a syste
      - Reactions occur when "atoms" or "molecules" collide.
      - Define probabilities for collisions leading to reactions based on parameters like temperature or concentration.
    - **Reaction Pathways:**
-     - Use rules like \( A + B \rightarrow C \) or \( A + BC \rightarrow AB + C \).
+     - Use rules like $$A + B \rightarrow C$$ or $$A + BC \rightarrow AB + C$$.
    - **Formalization:**
-     - \( \text{Reactants } R_1 + R_2 \text{ form products if } E_{\text{collision}} \geq \text{threshold.} \)
+     - $$\text{Reactants } R_1 + R_2 \text{ form products if } E_{\text{collision}} \geq \text{threshold.}$$
      - Define a lookup table of possible reaction outcomes for each pair of reactants.
 
 ---
 
 ### 4. **Conservation Laws**
    - **Mass Conservation:** The total number of atoms remains constant during a reaction.
-     \[
+     $$
      \text{Sum of inputs} = \text{Sum of outputs.}
-     \]
+     $$
    - **Energy Conservation:** Energy is conserved during reactions. Define whether energy changes result in heat, light, or other outputs.
    - **Formalization:** Track all atoms and energy units before and after reactions.
 
@@ -78,25 +78,25 @@ Below are key categories of rules that could form the foundation of such a syste
    - **Molecule Stability:** Define "stable" configurations where bonds are strong, and energy is minimized.
    - **Spontaneous Decay:** Unstable molecules may decompose randomly over time.
      - Add a time-dependent rule where bonds with low stability probabilities break after a random duration.
-   - **Formalization:** Assign each molecule a stability score. If \( \text{score} < \text{threshold}, \text{ decay occurs.} \)
+   - **Formalization:** Assign each molecule a stability score. If $$\text{score} < \text{threshold}, \text{ decay occurs.}$$
 
 ---
 
 ### 6. **Catalysts and Inhibitors**
    - **Catalysts:** Define special "atoms" or "molecules" that lower reaction energy barriers without being consumed.
-     - \( \text{If Catalyst C present, then } E_{\text{required}} = E_{\text{break}} / 2. \)
+     - $$\text{If Catalyst C present, then } E_{\text{required}} = E_{\text{break}} / 2.$$
    - **Inhibitors:** Prevent reactions by stabilizing reactants or raising energy barriers.
-     - \( \text{If Inhibitor I present, then } E_{\text{required}} = E_{\text{break}} \times 2. \)
+     - $$\text{If Inhibitor I present, then } E_{\text{required}} = E_{\text{break}} \times 2.$$
 
 ---
 
 ### 7. **Environment and External Energy Sources**
    - **Temperature:** Affects the kinetic energy of molecules.
-     \[
+     $$
      \text{Higher temperature } \rightarrow \text{more frequent collisions, more reactions.}
-     \]
+     $$
    - **Light/Electricity:** Add rules where external energy sources provide activation energy.
-     - \( \text{If photon energy } \geq \text{bond energy, bonds break.} \)
+     - $$ \text{If photon energy } \geq \text{bond energy, bonds break.} $$
 
 ---
 
@@ -116,15 +116,15 @@ Below are key categories of rules that could form the foundation of such a syste
 ---
 
 ### Example: Simple Artificial Chemistry Rule Set
-1. Define Atoms: \( A (valency=1), B (valency=2), C (valency=1) \).
+1. Define Atoms: $$ A \text{ (valency=1)}, B \text{ (valency=2)}, C \text{ (valency=1)} $$.
 2. Define Bonds:
-   - \( A \leftrightarrow B \): Strong bond, requires 10 energy units to break.
-   - \( B \leftrightarrow C \): Weak bond, requires 5 energy units to break.
+   - $$ A \leftrightarrow B $$: Strong bond, requires 10 energy units to break.
+   - $$ B \leftrightarrow C $$: Weak bond, requires 5 energy units to break.
 3. Define Reactions:
-   - \( A + B \rightarrow AB \) (exothermic, releases 5 energy units).
-   - \( AB + C \rightarrow ABC \) (requires 3 energy units).
+   - $$ A + B \rightarrow AB $$ (exothermic, releases 5 energy units).
+   - $$ AB + C \rightarrow ABC $$ (requires 3 energy units).
 4. Stability Rule:
-   - \( ABC \) is stable and does not decay spontaneously.
+   - $$ ABC $$ is stable and does not decay spontaneously.
 
 ---
 
