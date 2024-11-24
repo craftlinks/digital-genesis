@@ -40,10 +40,8 @@ Hieronder staan de belangrijkste categorieën regels die de basis kunnen vormen 
      - Ken elk atoom of molecuul een energiewaarde toe.
      - Definieer energiewijzigingen ($\Delta E$) voor het vormen of verbreken van bindingen.
    - **Reactievoorwaarden:** Een reactie vindt plaats als het systeem voldoende energie heeft om bindingen te verbreken en als de reactie energetisch gunstig is:
-     $$
-     \Delta E = E_{break} - E_{form}
-     $$
-     Als $\Delta E < 0$, vindt de reactie spontaan plaats.
+   $\Delta E = E_{break} - E_{form}$
+   Als $\Delta E < 0$, vindt de reactie spontaan plaats.
    - **Formalisatie:**
      - Als $E_{input} \geq E_{break}$, kunnen bindingen breken.
      - Als $\Delta E \leq 0$, zijn de producten stabieler en gaat de reactie door.
@@ -64,9 +62,7 @@ Hieronder staan de belangrijkste categorieën regels die de basis kunnen vormen 
 
 ### 4. **Behoudswetten**
    - **Behoud van Massa:** Het totale aantal atomen blijft constant tijdens een reactie.
-     $$
-     Input_{totaal} = Output_{totaal}
-     $$
+   $Input_{totaal} = Output_{totaal}$
    - **Behoud van Energie:** Energie wordt behouden tijdens reacties. Definieer of energieveranderingen resulteren in warmte, licht of andere outputs.
    - **Formalisatie:** Houd alle atomen en energie-eenheden vóór en na reacties bij.
 
@@ -90,9 +86,7 @@ Hieronder staan de belangrijkste categorieën regels die de basis kunnen vormen 
 
 ### 7. **Omgeving en Externe Energiebronnen**
    - **Temperatuur:** Beïnvloedt de kinetische energie van moleculen.
-     $$
-     T_{hoog} \rightarrow \text{Meer botsingen en reacties}
-     $$
+   T_{hoog} \rightarrow \text{Meer botsingen en reacties}
    - **Licht/Elektriciteit:** Voeg regels toe waarbij externe energiebronnen activeringsenergie leveren.
      - Als $E_{foton} \geq E_{binding}$, breken bindingen.
 
@@ -254,9 +248,7 @@ De aanwezigheid van autocatalytische cycli, waarbij producten van reacties hun e
 ### Voorbeeld metriekcombinatie voor reactiecirkels
 
 Als je je richt op reactiecirkels, kan je scoringsfunctie er bijvoorbeeld zo uitzien:
-$$
-S = w_1C + w_2D + w_3T
-$$
+$S = w_1C + w_2D + w_3T$
 Waarbij:
 - $C$: Aantal cirkels in de reactiegraaf.
 - $D$: Diversiteit van unieke moleculen.
