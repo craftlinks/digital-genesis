@@ -23,12 +23,14 @@ wget https://ziglang.org/builds/zig-linux-x86_64-$LATEST_VERSION.tar.xz
 # Extract the Zig compiler
 tar -xf zig-linux-x86_64-$LATEST_VERSION.tar.xz
 
-# Move the Zig compiler to /usr/local/bin
-sudo mv zig-linux-x86_64-$LATEST_VERSION/zig /usr/local/bin
+# Move the entire Zig directory to /usr/local/lib
+sudo mv zig-linux-x86_64-$LATEST_VERSION /usr/local/lib/zig
+
+# Create a symbolic link in /usr/local/bin
+sudo ln -sf /usr/local/lib/zig/zig /usr/local/bin/zig
 
 # Remove the Zig compiler directory
 rm -rf zig-linux-x86_64-$LATEST_VERSION.tar.xz
-rm -rf zig-linux-x86_64-$LATEST_VERSION
 
 # Write the Zig version to a file
 echo $LATEST_VERSION > zig_version.txt
