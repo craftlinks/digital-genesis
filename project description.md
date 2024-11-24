@@ -42,15 +42,15 @@ Below are key categories of rules that could form the foundation of such a syste
 ### 2. **Energy Rules**
    - **Energy Levels:**
      - Assign each atom or molecule an energy value.
-     - Define energy changes (\( \Delta E \)) for forming or breaking bonds.
+     - Define energy changes ($\Delta E$) for forming or breaking bonds.
    - **Reaction Trigger:** A reaction occurs if the system has enough energy to overcome bond-breaking requirements and is energy-favorable overall:
-     \[
+     $$
      \Delta E = E_{\text{break}} - E_{\text{form}}
-     \]
-     If \( \Delta E < 0 \), the reaction occurs spontaneously.
+     $$
+     If $\Delta E < 0$, the reaction occurs spontaneously.
    - **Formalization:**
-     - \( \text{If } E_{\text{input}} \geq E_{\text{break}} \text{, then bonds can break.} \)
-     - \( \text{If } \Delta E \leq 0 \text{, then products are more stable and reaction proceeds.} \)
+     - $\text{If } E_{\text{input}} \geq E_{\text{break}} \text{, then bonds can break.}$
+     - $\text{If } \Delta E \leq 0 \text{, then products are more stable and reaction proceeds.}$
 
 ---
 
