@@ -20,6 +20,28 @@ This makes artificial chemistry a powerful toolfor studying abstract concepts li
 It is assumed that an artificial chemistry system, with sufficiently rich and open-ended rules, could potentially give rise to increasingly complex structures and behaviors
 that mirror characteristics we associate with life.
 
+## Why it matters?
+
+1. **Understanding Life's Origins**
+- The project could provide insights into how life might have emerged from simple chemical processes
+- This fundamental knowledge could inform theories about life's origins on Earth and potential for life elsewhere
+- Better understanding of minimal requirements for life-like systems
+
+2. **Computer Science and AI Advancement**
+- Development of new computational methods for handling complex systems
+- Advances in simulation techniques could benefit other fields
+- Novel approaches to artificial intelligence through bottom-up emergence
+
+3. **Technological Innovation**
+- Development of new computational tools and frameworks
+- Potential for new approaches to information processing and storage
+- Could inspire novel technological solutions based on biological principles
+
+4. **Cross-disciplinary Benefits**
+- Bridges multiple fields (chemistry, biology, computer science)
+- Promotes interdisciplinary collaboration
+- Could lead to unexpected discoveries and applications
+
 ## Possible Rules and their formalization
 
 To create an artificial chemistry system that could potentially give rise to life-like behaviors, 
