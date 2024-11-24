@@ -256,3 +256,133 @@ Where:
 - w₁, w₂, w₃: Weights reflecting the importance of each factor.
 
 ---
+
+## Breaking Computation Walls
+
+A key challenge in simulating artificial chemistry systems is their intensive computational requirements. 
+One promising approach to address this is leveraging emergent properties to reduce complexity - 
+by identifying stable recurring patterns like cyclic reactions and replacing their detailed simulation with simplified proxy calculations that capture the essential behavior 
+while requiring far less processing power.
+
+Here’s how we propose to design such a system:
+
+
+### **1. Identify Emergent Substructures**
+Emergent substructures are patterns or dynamics that arise repeatedly in the system and have predictable behavior. These could include:
+- **Reaction Cycles:** Groups of molecules that participate in closed-loop reactions (e.g., autocatalytic cycles).
+- **Stable Molecules/Complexes:** Molecules or clusters that do not decay or react further over a long time.
+- **Meta-Molecules:** Aggregations of molecules that behave as a single unit (e.g., protocell-like structures).
+- **Functional Units:** Systems of reactions that perform a specific task (e.g., energy harvesting or molecule synthesis).
+
+---
+
+### **2. Replace Substructures with Proxies**
+Once identified, replace the computationally expensive simulation of substructure details with an **abstract proxy** that approximates its behavior. 
+The proxy can encapsulate the substructure's behavior, dynamics, and energy interactions.
+
+#### **Example Proxies:**
+1. **Reaction Cycles:**
+   - Replace all individual reactions in a cycle with a single "cycle reaction."
+   - Proxy attributes:
+     - Net inputs and outputs of the cycle.
+     - Cycle rate (determined by the slowest reaction step).
+     - Energy balance (\( \Delta E \)) over the cycle.
+   - Example: 
+     Instead of simulating \( A + B \rightarrow C \), \( C + D \rightarrow E \), and \( E \rightarrow A \), represent this cycle as:
+     \[
+     (A + B + D) \xrightarrow{\text{Cycle Proxy}} A + E + \text{(Energy)}.
+     \]
+
+2. **Stable Molecules/Complexes:**
+   - Treat stable molecules as static entities that do not require constant computation.
+   - Proxy attributes:
+     - Lifetime or persistence score (how long it remains stable).
+     - Probability of disintegration or reaction given specific conditions.
+
+3. **Aggregated Structures (Meta-Molecules):**
+   - Encapsulate groups of interacting molecules into a single entity with effective properties.
+   - Proxy attributes:
+     - Effective size, energy, and interaction range.
+     - Behavior summary (e.g., acts as a catalyst or reacts when certain molecules are present).
+
+4. **Functional Units:**
+   - Treat a group of reactions performing a task as a "black box."
+   - Proxy attributes:
+     - Input-output behavior.
+     - Efficiency or yield (e.g., number of outputs per input consumed).
+
+---
+
+### **3. Hierarchical Simulation**
+Use a hierarchical framework where the system operates at multiple abstraction levels:
+- **Low Level:** Simulate individual molecules and reactions for novel or unstable substructures.
+- **High Level:** Use proxies to simulate stable or repetitive substructures.
+
+Switch dynamically between levels of detail based on context:
+- Use detailed simulation for newly formed substructures or during perturbations.
+- Transition to proxies once a substructure becomes stable or predictable.
+
+---
+
+### **4. Adaptive Proxy Refinement**
+Emergent substructures might evolve over time, necessitating adjustments to proxies:
+1. **Dynamic Recalibration:**
+   - Periodically recompute proxy parameters (e.g., cycle rates or energy balances) based on changes in the environment or system state.
+2. **Proxy Replacement:**
+   - If a substructure's behavior changes significantly, replace its proxy with a new one or revert to detailed simulation.
+
+---
+
+### **5. Example Workflow for Cycle Compression**
+1. **Detect Cycle:**
+   - Identify a reaction cycle using graph algorithms (e.g., Tarjan's algorithm for strongly connected components).
+   - Example: \( A \rightarrow B \rightarrow C \rightarrow A \).
+2. **Analyze Behavior:**
+   - Compute:
+     - Net input-output balance.
+     - Energy cost or yield per cycle iteration.
+     - Reaction rates for each step.
+3. **Create Proxy:**
+   - Replace cycle with a single reaction node:
+     \[
+     \text{Cycle Proxy: } A \xrightarrow{\text{net rate}} A + \text{(outputs)} + \text{(energy)}.
+     \]
+4. **Simulate with Proxy:**
+   - Use the proxy for subsequent computations, skipping the detailed simulation of intermediate steps.
+
+---
+
+### **6. Benefits of Using Proxies**
+1. **Reduced Computational Complexity:**
+   - Avoid repetitive calculations for stable, predictable substructures.
+   - Focus computational resources on novel, unstable, or rare interactions.
+
+2. **Scalability:**
+   - Simplified representation of emergent dynamics allows simulation of larger systems over longer timescales.
+
+3. **Preservation of System Behavior:**
+   - Well-designed proxies encapsulate the essential behavior of substructures, maintaining the system's emergent properties.
+
+---
+
+### **7. Challenges and Solutions**
+1. **Detecting Substructures:**
+   - **Challenge:** Identifying meaningful substructures in a dynamic system.
+   - **Solution:** Use graph-based algorithms or statistical analysis to detect cycles, stable aggregates, or repeating patterns.
+
+2. **Proxy Accuracy:**
+   - **Challenge:** Simplified proxies may fail to capture subtle dynamics.
+   - **Solution:** Periodically validate proxies against detailed simulations and refine them as needed.
+
+3. **Transitioning Between Levels:**
+   - **Challenge:** Switching between detailed and proxy simulation can introduce inconsistencies.
+   - **Solution:** Use smooth transitions and maintain consistency by preserving state variables (e.g., molecule counts, energy levels).
+
+---
+
+### **8. Metrics for Proxy Effectiveness**
+1. **Compression Ratio:** Ratio of computation time with proxies versus detailed simulation.
+2. **Accuracy:** Difference between proxy-based and full-detail simulations for key metrics (e.g., molecule populations, energy flow).
+3. **Stability:** Ability of proxies to remain valid under varying conditions.
+
+---
