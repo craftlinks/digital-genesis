@@ -11,7 +11,7 @@ When we talk about "life-like" properties, we mean things like the ability to ma
 The key is that life-like properties (self-maintenance, reproduction, evolution) aren't programmed directly into the system - they emerge naturally from the underlying rules,
 just as biological life emerged from the basic chemistry of early Earth.
 
-## what is an artificial chemistry?
+## What is an artificial chemistry?
 
 Artificial chemistry is a formal system of rules and interactions that may or may not have any connection to real-world chemistry.
 While these systems can be inspired by real chemistry, they don't need to be - they can follow completely arbitrary rules we invent.
