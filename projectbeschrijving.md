@@ -25,12 +25,12 @@ Hieronder staan de belangrijkste categorieën regels die de basis kunnen vormen 
 
 ### 1. **Atomen en Bindingen**
    - **Definieer Atomen als Gegevensstructuren:** Elk "atoom" kan een gegevensstructuur zijn met eigenschappen zoals:
-     - Identiteit (\( A, B, C, \dots \)).
+     - Identiteit ($A, B, C, \dots$).
      - Valentie (aantal bindingen dat het kan vormen, bijv. 1, 2, 3).
      - Bindingsterkte (energie die nodig is om het te breken).
      - Reactiviteit (kans op deelname aan reacties).
    - **Definieer Bindingen als Verbindingen:** Bindingen worden gedefinieerd door relaties tussen atomen:
-     - \( A \leftrightarrow B \) geeft een binding aan tussen \( A \) en \( B \).
+     - $A \leftrightarrow B$ geeft een binding aan tussen $A$ en $B$.
      - Sla de bindingsterkte en het type op (bijv. enkelvoudig, dubbel, etc.).
 
 ---
@@ -38,15 +38,15 @@ Hieronder staan de belangrijkste categorieën regels die de basis kunnen vormen 
 ### 2. **Energiewetten**
    - **Energieniveaus:**
      - Ken elk atoom of molecuul een energiewaarde toe.
-     - Definieer energiewijzigingen (\( \Delta E \)) voor het vormen of verbreken van bindingen.
+     - Definieer energiewijzigingen ($\Delta E$) voor het vormen of verbreken van bindingen.
    - **Reactievoorwaarden:** Een reactie vindt plaats als het systeem voldoende energie heeft om bindingen te verbreken en als de reactie energetisch gunstig is:
-     \[
+     $$
      \Delta E = E_{\text{break}} - E_{\text{form}}
-     \]
-     Als \( \Delta E < 0 \), vindt de reactie spontaan plaats.
+     $$
+     Als $\Delta E < 0$, vindt de reactie spontaan plaats.
    - **Formalisatie:**
-     - \( \text{Als } E_{\text{input}} \geq E_{\text{break}}, \text{ kunnen bindingen breken.} \)
-     - \( \text{Als } \Delta E \leq 0, \text{ zijn de producten stabieler en gaat de reactie door.} \)
+     - $\text{Als } E_{\text{input}} \geq E_{\text{break}}, \text{ kunnen bindingen breken.}$
+     - $\text{Als } \Delta E \leq 0, \text{ zijn de producten stabieler en gaat de reactie door.}$
 
 ---
 
@@ -55,18 +55,18 @@ Hieronder staan de belangrijkste categorieën regels die de basis kunnen vormen 
      - Reacties vinden plaats wanneer "atomen" of "moleculen" botsen.
      - Definieer kansen dat botsingen leiden tot reacties, afhankelijk van parameters zoals temperatuur of concentratie.
    - **Reactiepadways:**
-     - Gebruik regels zoals \( A + B \rightarrow C \) of \( A + BC \rightarrow AB + C \).
+     - Gebruik regels zoals $A + B \rightarrow C$ of $A + BC \rightarrow AB + C$.
    - **Formalisatie:**
-     - \( \text{Reactanten } R_1 + R_2 \text{ vormen producten als } E_{\text{botsing}} \geq \text{drempel.} \)
+     - $\text{Reactanten } R_1 + R_2 \text{ vormen producten als } E_{\text{botsing}} \geq \text{drempel.}$
      - Definieer een lookup-tabel met mogelijke reactie-uitkomsten voor elk paar reactanten.
 
 ---
 
 ### 4. **Behoudswetten**
    - **Behoud van Massa:** Het totale aantal atomen blijft constant tijdens een reactie.
-     \[
+     $$
      \text{Som van input} = \text{Som van output.}
-     \]
+     $$
    - **Behoud van Energie:** Energie wordt behouden tijdens reacties. Definieer of energieveranderingen resulteren in warmte, licht of andere outputs.
    - **Formalisatie:** Houd alle atomen en energie-eenheden vóór en na reacties bij.
 
@@ -76,25 +76,25 @@ Hieronder staan de belangrijkste categorieën regels die de basis kunnen vormen 
    - **Molecuulstabiliteit:** Definieer "stabiele" configuraties waarbij bindingen sterk zijn en energie wordt geminimaliseerd.
    - **Spontaan Verval:** Instabiele moleculen kunnen willekeurig in de tijd uiteenvallen.
      - Voeg een tijdsafhankelijke regel toe waarbij bindingen met een lage stabiliteitskans breken na een willekeurige duur.
-   - **Formalisatie:** Ken elk molecuul een stabiliteitsscore toe. Als \( \text{score} < \text{drempel}, \text{ vindt verval plaats.} \)
+   - **Formalisatie:** Ken elk molecuul een stabiliteitsscore toe. Als $\text{score} < \text{drempel}, \text{ vindt verval plaats.}$
 
 ---
 
 ### 6. **Katalysatoren en Remmers**
    - **Katalysatoren:** Definieer speciale "atomen" of "moleculen" die energiebarrières verlagen zonder zelf verbruikt te worden.
-     - \( \text{Als Katalysator K aanwezig is, dan } E_{\text{vereist}} = E_{\text{break}} / 2. \)
+     - $\text{Als Katalysator K aanwezig is, dan } E_{\text{vereist}} = E_{\text{break}} / 2.$
    - **Remmers:** Voorkomen reacties door reactanten te stabiliseren of energiebarrières te verhogen.
-     - \( \text{Als Remmer I aanwezig is, dan } E_{\text{vereist}} = E_{\text{break}} \times 2. \)
+     - $\text{Als Remmer I aanwezig is, dan } E_{\text{vereist}} = E_{\text{break}} \times 2.$
 
 ---
 
 ### 7. **Omgeving en Externe Energiebronnen**
    - **Temperatuur:** Beïnvloedt de kinetische energie van moleculen.
-     \[
+     $$
      \text{Hogere temperatuur } \rightarrow \text{vaker botsingen, meer reacties.}
-     \]
+     $$
    - **Licht/Elektriciteit:** Voeg regels toe waarbij externe energiebronnen activeringsenergie leveren.
-     - \( \text{Als fotonenergie } \geq \text{bindingsenergie, breken bindingen.} \)
+     - $\text{Als fotonenergie } \geq \text{bindingsenergie, breken bindingen.}$
 
 ---
 
@@ -114,16 +114,16 @@ Hieronder staan de belangrijkste categorieën regels die de basis kunnen vormen 
 ---
 
 ### Voorbeeld: Eenvoudige Regelset voor Kunstmatige Chemie
-1. Definieer Atomen: \( A (\text{valentie}=1), B (\text{valentie}=2), C (\text{valentie}=1) \).
+1. Definieer Atomen: $A (\text{valentie}=1), B (\text{valentie}=2), C (\text{valentie}=1)$.
 2. Definieer Bindingen:
-   - \( A \leftrightarrow B \): Sterke binding, vereist 10 energiewaarden om te breken.
-   - \( B \leftrightarrow C \): Zwakke binding, vereist 5 energiewaarden om te breken.
+   - $A \leftrightarrow B$: Sterke binding, vereist 10 energiewaarden om te breken.
+   - $B \leftrightarrow C$: Zwakke binding, vereist 5 energiewaarden om te breken.
 3. Definieer Reacties:
-   - \( A + B \rightarrow AB \) (exotherm, geeft 5 energiewaarden af).
-   - \( AB + C \rightarrow ABC \) (vereist 3 energiewaarden).
+   - $A + B \rightarrow AB$ (exotherm, geeft 5 energiewaarden af).
+   - $AB + C \rightarrow ABC$ (vereist 3 energiewaarden).
 4. Stabiliteitsregel:
-   - \( ABC \) is stabiel en vervalt niet spontaan.
-   
+   - $ABC$ is stabiel en vervalt niet spontaan.
+
 ## Bemonstering van kunstmatige chemische regelsets
 
 Door deze aanpak van kunstmatige chemie te hanteren, bestaat er een oneindige ruimte van mogelijke regelsets die verschillende kunstmatige chemische systemen kunnen definiëren.  
@@ -134,14 +134,14 @@ Om de uitgebreide regelruimte te verkennen, hebben we een strategie nodig om reg
 ### **a) Regelgeneratie**
 - **Definitie van parameter-ruimte:**
   Definieer een geparametriseerde ruimte voor je kunstmatige chemische regels, bijvoorbeeld:
-  - Aantal atoomtypes (\( A, B, C \)).
+  - Aantal atoomtypes ($A, B, C$).
   - Limieten voor valentie (bijv. maximale bindingen die een atoom kan vormen).
   - Bindingsterktes en energievereisten.
   - Reactietypes (bijv. binaire botsingen, katalysatorgestuurde reacties, etc.).
 - **Stochastische regelcreatie:**
   Genereer regelsets willekeurig binnen deze geparametriseerde ruimte:
   - Wijs willekeurig bindingsterktes en vorm-/breekregels toe.
-  - Wijs willekeurig reactiepadways toe (bijv. \( A + B \rightarrow C, C \rightarrow A + D \)).
+  - Wijs willekeurig reactiepadways toe (bijv. $A + B \rightarrow C, C \rightarrow A + D$).
   - Randomiseer beginvoorwaarden (molecuulpopulaties, energieniveaus).
 
 ---
@@ -254,11 +254,11 @@ De aanwezigheid van autocatalytische cycli, waarbij producten van reacties hun e
 ### Voorbeeld metriekcombinatie voor reactiecirkels
 
 Als je je richt op reactiecirkels, kan je scoringsfunctie er bijvoorbeeld zo uitzien:
-\[
+$$
 \text{Score} = w_1 \cdot C + w_2 \cdot D + w_3 \cdot T
-\]
+$$
 Waarbij:
-- \( C \): Aantal cirkels in de reactiegraaf.
-- \( D \): Diversiteit van unieke moleculen.
-- \( T \): Tijd tot verval of stabilisatie.
-- \( w_1, w_2, w_3 \): Gewichten die het belang van elke factor weerspiegelen.
+- $C$: Aantal cirkels in de reactiegraaf.
+- $D$: Diversiteit van unieke moleculen.
+- $T$: Tijd tot verval of stabilisatie.
+- $w_1, w_2, w_3$: Gewichten die het belang van elke factor weerspiegelen.
