@@ -86,7 +86,7 @@ Hieronder staan de belangrijkste categorieën regels die de basis kunnen vormen 
 
 ### 7. **Omgeving en Externe Energiebronnen**
    - **Temperatuur:** Beïnvloedt de kinetische energie van moleculen.
-   T_{hoog} \rightarrow \text{Meer botsingen en reacties}
+   $T_{hoog} \rightarrow \text{Meer botsingen en reacties}$
    - **Licht/Elektriciteit:** Voeg regels toe waarbij externe energiebronnen activeringsenergie leveren.
      - Als $E_{foton} \geq E_{binding}$, breken bindingen.
 
