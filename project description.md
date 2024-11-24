@@ -1,4 +1,4 @@
-# Project Title: Digital Genesis - Creating Life from Virtual Chemistry
+# Digital Genesis - Creating Life from Virtual Chemistry
 
 This project aims to simulate spontaneous artificial life generation and open-ended evolution through developing a framework to design, test and optimize artificial chemistry rules.
 
