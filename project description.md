@@ -29,12 +29,12 @@ Below are key categories of rules that could form the foundation of such a syste
 
 ### 1. **Atoms and Bonds**
    - **Define Atoms as Data Units:** Each "atom" can be a data structure with properties like:
-   - Identity $A$, $B$, $C$, $\dots$ .
+   - Identity $$A$$, $$B$$, $$C$$, $$\dots$$ .
      - Valency (number of bonds it can form, e.g., 1, 2, 3).
      - Bond Strength (energy required to break it).
      - Reactivity (probability of participating in reactions).
    - **Define Bonds as Connections:** Bonds are defined by relationships between atoms:
-     - \( A \leftrightarrow B \) indicates a bond between \( A \) and \( B \).
+     - $$A \leftrightarrow B$$ indicates a bond between $$A$$ and $$B$$.
      - Store bond strength and type (e.g., single, double, etc.).
 
 ---
