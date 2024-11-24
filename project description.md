@@ -246,13 +246,13 @@ The presence of autocatalytic cycles, where products of reactions catalyze their
 
 ### Example Metric Combination for Reaction Cycles
 For a focus on reaction cycles, your scoring function might look like this:
-$$
-\text{Score} = w_1 \cdot C + w_2 \cdot D + w_3 \cdot T
-$$
+
+Score = w₁ · C + w₂ · D + w₃ · T
+
 Where:
-- $$ C $$: Number of cycles in the reaction graph.
-- $$ D $$: Diversity of unique molecules.
-- $$ T $$: Time to decay or stabilization.
-- $$ w_1, w_2, w_3 $$: Weights reflecting the importance of each factor.
+- C: Number of cycles in the reaction graph.
+- D: Diversity of unique molecules.
+- T: Time to decay or stabilization. 
+- w₁, w₂, w₃: Weights reflecting the importance of each factor.
 
 ---
